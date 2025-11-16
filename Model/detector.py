@@ -106,7 +106,7 @@ def plot_distribution(config, df_all_features, save_path):
 
     # Add threshold line
     percent = np.percentile(df_all_features.loc[df_all_features["label"] == 0, "score"], config["threshold"])
-    plt.axvline(percent, color="blue", linestyle="--", label=f"{config["threshold"]}%")
+    plt.axvline(percent, color="blue", linestyle="--", label="Threshold")
 
     # Set plot title, labels, and legend
     plt.title("Score Distribution")
