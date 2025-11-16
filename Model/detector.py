@@ -135,6 +135,7 @@ def save_result(config, df_all_features, predict_list, save_path):
     save_path : str
         CSV file path to save results.
     """
+
     # Filter predicted accounts
     df_result = df_all_features[df_all_features["acct"].isin(predict_list)].copy()
 
