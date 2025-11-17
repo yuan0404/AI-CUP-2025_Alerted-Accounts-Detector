@@ -1,6 +1,4 @@
 """
-detector.py
-
 Module for detecting alert accounts and visualizing results.
 
 Functions
@@ -37,7 +35,6 @@ def alert_acct_detector(config, df_alert_features, df_predict_features):
     pandas.DataFrame
         DataFrame containing all accounts with calculated alert scores.
     """
-
     # Copy input DataFrames to avoid modification
     df_alert_copy = df_alert_features.copy()
     df_predict_copy = df_predict_features.copy()
@@ -96,7 +93,6 @@ def plot_distribution(config, df_all_features, save_path):
     save_path : str
         File path to save the plotted figure.
     """
-
     # Create figure
     plt.figure(figsize=(8, 6))
 
@@ -136,7 +132,6 @@ def save_result(config, df_all_features, predict_list, save_path):
     save_path : str
         CSV file path to save results.
     """
-
     # Filter predicted accounts
     df_result = df_all_features[df_all_features["acct"].isin(predict_list)].copy()
 

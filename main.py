@@ -1,6 +1,4 @@
 """
-main.py
-
 Main pipeline for detecting alert accounts from transaction data.
 
 Functions
@@ -28,7 +26,7 @@ from Model.detector import alert_acct_detector, plot_distribution, save_result
 
 def main():
     """
-    Main pipeline execution.
+    Execute the main pipeline.
 
     Steps
     -----
@@ -38,7 +36,6 @@ def main():
     4. Configure and run alert detection.
     5. Plot score distribution and save final results.
     """
-
     # Define directories
     PREPROCESS_DIR = "Preprocess/"
     MODEL_DIR = "Model/"

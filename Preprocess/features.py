@@ -1,6 +1,4 @@
 """
-features.py
-
 Module for constructing account transaction features and visualizing feature distributions.
 
 Functions
@@ -35,7 +33,6 @@ def build_acct_features(acct_list, df_txn, alert_list):
     pandas.DataFrame
         DataFrame of calculated features for each account.
     """
-
     # Filter transactions involving the target accounts and sort by date/time
     df_filtered = df_txn.query("from_acct in @acct_list or to_acct in @acct_list").copy()
     df_filtered = df_filtered.sort_values(by=["txn_date", "txn_time"])
@@ -100,7 +97,6 @@ def plot_features(df_alert_features, df_predict_features, save_path):
     save_path : str
         File path to save the plotted figure.
     """
-
     # Get list of feature columns
     feature_cols = df_alert_features.drop(columns=["acct"]).columns.tolist()
 
