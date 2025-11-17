@@ -101,8 +101,9 @@ def plot_distribution(config, df_all_features, save_path):
     plt.figure(figsize=(8, 6))
 
     # Plot histogram for accounts
-    plt.hist(df_all_features.loc[df_all_features["label"] == 1, "score"], bins=50, alpha=0.5, color="red", label="Alert")
-    plt.hist(df_all_features.loc[df_all_features["label"] == 0, "score"], bins=50, alpha=0.5, color="blue", label="Predict")
+    bins = np.linspace(0, 1, 50)
+    plt.hist(df_all_features.loc[df_all_features["label"] == 1, "score"], bins=bins, alpha=0.5, color="red", label="Alert")
+    plt.hist(df_all_features.loc[df_all_features["label"] == 0, "score"], bins=bins, alpha=0.5, color="blue", label="Predict")
 
     # Add threshold line
     percent = np.percentile(df_all_features.loc[df_all_features["label"] == 0, "score"], config["threshold"])

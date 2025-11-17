@@ -12,6 +12,7 @@ plot_features(df_alert_features, df_predict_features, save_path)
 """
 
 import pandas as pd
+import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
@@ -119,8 +120,9 @@ def plot_features(df_alert_features, df_predict_features, save_path):
         ax = plt.subplot(n_rows, n_cols, i + 1)
 
         # Accounts histogram
-        sns.histplot(df_alert_features[col], color="red", label="Alert", kde=False, bins=30, stat="percent", alpha=0.4, ax=ax)
-        sns.histplot(df_predict_features[col], color="blue", label="Predict", kde=False, bins=30, stat="percent", alpha=0.4, ax=ax)
+        bins = np.linspace(0, 1, 30)
+        sns.histplot(df_alert_features[col], color="red", label="Alert", kde=False, bins=bins, stat="percent", alpha=0.4, ax=ax)
+        sns.histplot(df_predict_features[col], color="blue", label="Predict", kde=False, bins=bins, stat="percent", alpha=0.4, ax=ax)
 
         # Set plot title and labels
         ax.set_title(col)
