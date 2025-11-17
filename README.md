@@ -1,11 +1,11 @@
 # AI 警示帳戶偵測系統
 
-本專案為 **[AI CUP 2025 玉山人工智慧公開挑戰賽－AI偵探出任務，精準揪出警示帳戶！](https://tbrain.trendmicro.com.tw/Competitions/Details/40)** 的參賽作品。  
+本專案為 **[AI CUP 2025 玉山人工智慧公開挑戰賽－AI偵探出任務，精準揪出警示帳戶！](https://tbrain.trendmicro.com.tw/Competitions/Details/40)** 的參賽作品。
 專案目標是從帳戶交易資料中偵測潛在警示帳戶，主要功能包括特徵建構、警示檢測，以及結果視覺化與輸出。
 
-**隊伍編號**：TEAM_8666  
-**隊長姓名**：趙堉安  
-**隊員姓名**：金以凡、劉千慈、陳映竹  
+**隊伍編號**：TEAM_8666
+**隊長姓名**：趙堉安
+**隊員姓名**：金以凡、劉千慈、陳映竹
 
 ## 專案結構
 
@@ -49,7 +49,7 @@
   python main.py
   ```
 
-### 4. 執行結果
+### 4. 實驗結果
 
 - `Preprocess/features.jpg`：特徵分布比較圖
 - `Model/detector.jpg`：警示分數分布圖
